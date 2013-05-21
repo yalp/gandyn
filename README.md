@@ -9,8 +9,8 @@ using the [Gandi RPC APIs](http://doc.rpc.gandi.net/).
 
 With the go tools:
 
-$ go get github.com/yalp/gandyn
-$ go install github.com/yalp/gandyn
+    $ go get github.com/yalp/gandyn
+    $ go install github.com/yalp/gandyn
 
 ## Usage
 
@@ -23,12 +23,12 @@ The record must already exist on the active version of the zone before gandyn ca
 
 Just launch it at startup as a service on startup, or using cron :
 
-    @reboot /path/to/gandyn
+    @reboot /path/to/gandyn -apikey "XXX" -zone 6666 -record "www"
 
 Once started, gandyn will keep running indefinetly until stopped.
 
 ## Options
 
-* ’-apikey’, ‘-zone‘, ’-record’ are mandatory (see above)
-* ’-refresh’ defines the delay for polling the pulic IP address
-* ’-test’ to use the test OT&E platform instead of production platform
+* `-apikey`, `-zone`, `-record` are mandatory (see above)
+* `-refresh` defines the delay for polling the pulic IP address
+* `-test` to use the test OT&E platform instead of production platform
